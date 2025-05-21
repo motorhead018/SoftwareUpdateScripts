@@ -20,10 +20,12 @@ Enter your synopsis here.
 Provide a more full description here.
 .NOTES
 Written By: Damien Solodow @dsolodow
+Modified By: William Bluhm @Motorhead018
 Version 1.0: 04/09/2020
+Version 1.1: 04/01/2025
 #>
 
-$3rdParties = @('Patch My PC', 'Lenovo')
+$3rdParties = @('Patch My PC', 'Lenovo', 'HP', 'Dell')
 Function Invoke-SelectUpdatesPlugin {
 
     $DeclineUpdates = @{}

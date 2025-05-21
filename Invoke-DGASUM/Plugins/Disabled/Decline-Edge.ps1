@@ -5,18 +5,21 @@ Declines unsupported Channels, and older versions of Edge
 Declines unsupported Channels, and optionally older and superceded versions of Edge
 .NOTES
 Written By: Damien Solodow @dsolodow
-Version 1.0: 01/24/2020
+Modified By: William Bluhm @Motorhead018
+Version 1.0: 04/09/2020
+Version 1.1: 04/01/2025
+Version 1.2: 05/20/2025
 #>
 #Un-comment and add elements to this array for Channels you support.
 
-#$SupportedChannels = @("Microsoft Edge-Stable Channel", "Microsoft Edge-Beta Channel", "Microsoft Edge-Dev Channel")
+$SupportedChannels = @("Microsoft Edge-Stable Channel")
 
 #Set this to $True to decline all but the latest version of each Channels or $False to ignore versions.
-$LatestVersionOnly = $False
+$LatestVersionOnly = $True
 
 #If Microsoft decides to change their naming scheme you will need to update this variable to support the new scheme.
-$KnownChannels = @("Microsoft Edge-Stable Channel", "Microsoft Edge-Beta Channel", "Microsoft Edge-Dev Channel")
-Function Invoke-SelectUpdatesPlugin {
+$KnownChannels = @("Microsoft Edge-Stable Channel", "Microsoft Edge-Beta Channel", "Microsoft Edge-Dev Channel", "Microsoft Edge-Canary Channel", "Microsoft Edge-Extended Stable Channel")
+Function Invoke-SelectUpdatesPlugin{
 
 
     $DeclineUpdates = @{}
